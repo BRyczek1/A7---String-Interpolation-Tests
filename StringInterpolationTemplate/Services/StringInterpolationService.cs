@@ -16,7 +16,7 @@ public class StringInterpolationService : IStringInterpolationService
         _logger.Log(LogLevel.Information, "Executing the StringInterpolationService");
     }
 
-    //1. January 22, 2019 (right aligned in a 40 character field)
+
     public string Number01()
     {
         var date = _date.Now.ToString("MMMM dd, yyyy");
@@ -28,52 +28,62 @@ public class StringInterpolationService : IStringInterpolationService
 
     public string Number02()
     {
-        throw new NotImplementedException();
+        var today = _date.Now;
+        return $"{today:yyyy}" + "." + $"{today:MM}" + "." + $"{today:dd}";
     }
 
     public string Number03()
     {
-        throw new NotImplementedException();
+        var today = _date.Now;
+        return "Day " + $"{today:dd}" + " of " + $"{today:MMMM}" + ", " + $"{today:yyyy}";
     }
 
     public string Number04()
     {
-        throw new NotImplementedException();
+        var today = _date.Now;
+        return "Year: " + $"{today:yyyy}" + ", Month: " + $"{today:MM}" + ", Day: " + $"{today:dd}";
     }
 
     public string Number05()
     {
-        throw new NotImplementedException();
+        var today = _date.Now;
+        return $"{today,17:dddd}";
     }
 
     public string Number06()
     {
-        throw new NotImplementedException();
+        var today = _date.Now;
+        return $"{today,10:t}" + $"{today,10:dddd}";
     }
 
     public string Number07()
     {
-        throw new NotImplementedException();
+        var today = _date.Now;
+        return "h:" + $"{today:hh}" + ", m:" + $"{today:mm}" + ", s:" + $"{today:ss}";
     }
 
     public string Number08()
     {
-        throw new NotImplementedException();
+        var today = _date.Now;
+        return $"{today:yyyy}" + "." + $"{today:MM}" + "." + $"{today:dd}" + "." + $"{today:hh}" + "." + $"{today:mm}" + "." + $"{today:ss}";
     }
 
     public string Number09()
     {
-        throw new NotImplementedException();
+        var pi = Math.PI;
+        return $"{pi,14:n3}";
     }
 
     public string Number10()
     {
-        throw new NotImplementedException();
+        var pi = Math.PI;
+        return $"{pi:C2}";
     }
 
     public string Number11()
     {
-        throw new NotImplementedException();
+        var today = _date.Now;
+        return $"{today.Year:7E7}";
     }
 
     //2.2019.01.22
