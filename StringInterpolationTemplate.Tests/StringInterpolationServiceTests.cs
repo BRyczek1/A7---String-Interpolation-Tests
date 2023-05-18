@@ -104,6 +104,6 @@ public class StringInterpolationServiceTests
     {
         var response = _service.Number11();
 
-        Assert.Equal("7E7", response);
+        Assert.Equal($"7E7 {byte.MaxValue:X}", response);
     }
 }
